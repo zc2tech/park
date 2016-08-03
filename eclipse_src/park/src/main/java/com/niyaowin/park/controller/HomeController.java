@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.niyaowin.park.entity.Greeting;
+import com.niyaowin.park.jpa.entity.Greeting;
 
 @Controller
 public class HomeController {

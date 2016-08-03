@@ -1,4 +1,9 @@
-package com.niyaowin.park.entity;
+package com.niyaowin.park.jpa.entity;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+import org.springframework.data.annotation.Id;
 
 //staff_id
 //is_super
@@ -11,6 +16,8 @@ package com.niyaowin.park.entity;
 
 public class Staff {
 
+	@Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
 	private long staffId;
 	 
 	private boolean isSuper;

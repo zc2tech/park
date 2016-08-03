@@ -1,4 +1,4 @@
-package com.niyaowin.park.entity;
+package com.niyaowin.park.jpa.entity;
 
 public class Greeting {
 

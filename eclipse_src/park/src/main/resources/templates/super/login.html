@@ -7,7 +7,8 @@
 <body>
 	<h1>Super User Login</h1>
     <form action="#" th:action="@{/super/doLogin}" th:object="${form}" method="post">
-    	<p>password: &nbsp;<input type="password" th:text="*{password}" th:value="${form.password}" /></p>
+    	<p>password: &nbsp;<input type="password" th:field="*{password}" /></p>
+    	<p>nickname: &nbsp;<input type="text" th:field="*{nickname}" /></p>
         <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
     </form>
 </body>

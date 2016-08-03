@@ -11,9 +11,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.context.request.WebRequest;
+import org.thymeleaf.util.StringUtils;
 
-import com.niyaowin.park.entity.Staff;
 import com.niyaowin.park.form.FormStaff;
+import com.niyaowin.park.jpa.entity.Staff;
 
 
 @Controller
@@ -35,9 +36,12 @@ public class SuperController {
     
     // super user login
     @RequestMapping(value="/super/doLogin", method=RequestMethod.POST)
-    public String doLogin(@ModelAttribute("form") FormStaff form, BindingResult bindingResult,Model model) { 
+    public String doLogin(FormStaff form, BindingResult bindingResult,Model model) { 
     	//Object f2 = model.
     	//FormStaff form = new FormStaff();
+    	
+    	
+    	
         model.addAttribute("form", form);
         return "super/login";
     }    
