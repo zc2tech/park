@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="park-staff" namespace="/staff" extends="park-default">
+
+        <action name="superLogin" method="superLogin"  class="com.niyaowin.park.action.staff.SuperAction">
+            <!-- <result name="success" type="thymeleaf">super/login</result>  -->
+           <result name="success" >/jsp/super/login.jsp</result> 
+        </action>
+      
+        <action name="doSuperLogin" method="doSuperLogin" class="com.niyaowin.park.action.staff.SuperAction">
+            <result name="success" >/jsp/super/manage.jsp</result>
+            <result name="inputjsp" >/jsp/super/login.jsp</result> 
+        </action>
+        
+    </package>
+
+</struts>
